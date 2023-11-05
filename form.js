@@ -26,7 +26,7 @@ form.addEventListener("submit", (e) => {
     const filter = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (inputValue.match(filter)) {
-        localStorage.setItem("input-value", inputValue.join(""))
+        localStorage.setItem("input-value", inputValue)
         window.location.href = "next.html"
     } else {
         error(errorElemnt, input)
