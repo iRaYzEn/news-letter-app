@@ -6,7 +6,7 @@ function error(errorHolder, input) {
     errorHolder.textContent = "Valid email required"
     input.style.borderColor = "var(--Tomato)"
     input.style.color = "var(--Tomato)"
-    input.style.backgroundColor = "#fffafa"
+    input.style.backgroundColor = "rgb(255, 201, 201)"
 }
 
 
@@ -21,15 +21,13 @@ form.addEventListener("submit", (e) => {
     e.preventDefault()
 
 
-    const inputValue = [...input.value]
+    const inputValue = input.value
 
-    const filterAT = inputValue.some(let => let == "@")
-    const filterDot = inputValue.some(let => let == ".")
+    const filter = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    if (filterAT && filterDot) {
+    if (inputValue.match(filter)) {
         localStorage.setItem("input-value", inputValue.join(""))
         window.location.href = "next.html"
-
     } else {
         error(errorElemnt, input)
     }
