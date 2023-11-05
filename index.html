@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href=".//images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" media="all">
+    <script defer src="form.js"></script>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+
+    <!-- Sign-up form start -->
+
+    <div class="wrapper">
+        <div class="card">
+            <div class="even-columns">
+                <div class="col">
+                    <div class="col__header">
+                        <h1 class="card__title">Stay updated!</h1>
+                        <p class="card__para">Join 60,000+ product managers receiving monthly updates on:</p>
+                    </div>
+                    <nav class="card__nav">
+                        <ul class="card__list">
+                            <li class="card__list-item">
+                                <img class="list__item-icon" src="images/icon-success.svg" alt="">
+                                <p class="list__item-para">Product discovery and building what matters</p>
+                            </li>
+                            <li class="card__list-item">
+                                <img class="list__item-icon" src="images/icon-success.svg" alt="">
+                                <p class="list__item-para">Measuring to ensure updates are a success</p>
+                            </li>
+                            <li class="card__list-item">
+                                <img class="list__item-icon" src="images/icon-success.svg" alt="">
+                                <p class="list__item-para">And much more!</p>
+                            </li>
+                        </ul>
+                    </nav>
+                    <form class="form">
+                        <div class="input__box">
+                            <label class="input__label">Email address</label>
+                            <input class="input" type="text" placeholder="email@example.com">
+                            <p class="error-elemnt"></p>
+                        </div>
+                        <div class="input__box">
+                            <button class="btn" type="submit">Subscribe to monthly newsletter</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col">
+                    <picture>
+                        <source srcset="/images/illustration-sign-up-desktop.svg" media="(min-width: 750px)">
+
+                        <source srcset="/images/illustration-sign-up-mobile.svg" media="(max-width: 800px)">
+                        <img class="col__img" src="/images/illustration-sign-up-desktop.svg" alt="">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+
+    <!-- Thanks for subscribing! -->
+    <!---->
+    <!-- A confirmation email has been sent to ash@loremcompany.com.  -->
+    <!-- Please open it and click the button inside to confirm your subscription. -->
+    <!---->
+    <!-- Dismiss message -->
+
+    <!-- Success message end -->
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href=".//images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="next.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <div class="card__img-box">
+                <img class="card__img" src="images/icon-success.svg" alt="">
+            </div>
+            <h1 class="card__title">Thanks for subscribing!</h1>
+            <p class="card__para">A confirmation email has been set to <span class="email">ash@loremcompany.com</span>.
+                Please opne it and click the button inside to confirm your subscription</p>
+            <button class="btn">Dismiss message</button>
+        </div>
+    </div>
+
+    <script>
+
+        const email = document.querySelector(".email")
+        const userEmail = localStorage.getItem("input-value")
+        const btn = document.querySelector(".btn")
+
+        email.textContent = userEmail
+
+        localStorage.clear()
+
+        btn.addEventListener("click", (e) => {
+            window.location.href = "index.html"
+        })
+    </script>
+</body>
+
+</html>

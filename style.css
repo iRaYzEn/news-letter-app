@@ -1,0 +1,162 @@
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--Dark-Slate-Grey);
+}
+
+.wrapper {
+    overflow-x: hidden;
+    background: var(--Charcoal-Grey);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: var(--White);
+    padding: 2em;
+    border-radius: 2em;
+}
+
+.even-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.col:first-child {
+    width: 50%;
+    padding-left: 2em;
+}
+
+.card__title {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 1em;
+}
+
+.card__para {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+@media (max-width: 750px){
+    .even-columns {
+        flex-direction: column-reverse;
+        align-items: center;
+        max-width: 500px;
+    }
+    .col:first-child {
+        padding-left: 0;
+        margin-inline: auto;
+        width: 90%;
+        padding-bottom: 3em;
+    }
+    .card__title {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 450px){
+    .wrapper {
+        height: auto;
+    }
+    .card {
+        padding: 0;
+        border-radius: 0;
+    }
+}
+
+
+.card__list {
+    list-style: none;
+}
+
+.card__list-item {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.list__item-para {
+    font-size: 1.5rem;
+}
+
+.list__item-icon {
+    height: 20px;
+}
+
+.form {
+    margin-top: 5em;
+}
+
+.input__box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.error-elemnt {
+    color: var(--Tomato);
+    font-weight: 700;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.input__label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: .8em;
+}
+
+.input {
+    max-width: 100%;
+    border: 1px solid var(--Grey);
+    border-radius: .2em;
+    padding: 1em;
+    margin-bottom: 1.5em;
+    outline: none;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--Dark-Slate-Grey);
+    color: white;
+    padding: 1.2em .8em .8em .8em;
+    border-radius: .5em;
+    border: none;
+    outline: none;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.col__img {
+    max-height: 500px;
+}
+

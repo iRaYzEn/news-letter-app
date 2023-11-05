@@ -1,0 +1,79 @@
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--Dark-Slate-Grey);
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--Charcoal-Grey);
+}
+
+.card {
+    padding: 2em 3em;
+    background: var(--White);
+    width: 90%;
+    max-width: 400px;
+    border-radius: 2em;
+}
+
+.card__img-box {
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+.card__img {
+    height: 40px;
+}
+
+.card__title {
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: .8em;
+    font-weight: 700;
+}
+
+.card__para {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2em;
+    line-height: 1.5;
+}
+
+.email {
+    font-weight: 700;
+}
+
+.btn {
+    width: 100%;
+    border: none;
+    background: var(--Charcoal-Grey);
+    color: var(--White);
+    padding: 1em;
+    border-radius: .5em;
+    cursor: pointer;
+    margin-bottom: 2em;
+}
